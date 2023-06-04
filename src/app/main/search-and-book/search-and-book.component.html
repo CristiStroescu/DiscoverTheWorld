@@ -1,0 +1,25 @@
+<app-search-bar (searchDestination)="onSearchEnteredDestination($event)"></app-search-bar>
+<div class="services-info">
+    <div class="title">
+        <h1>OUR SERVICES</h1>
+        <hr>
+    </div>
+    <div class="services" *ngFor="let service of services">
+        <app-service-info [name]="service.name" [articleTitle]="service.articleTitle"
+            [about]="service.about"></app-service-info>
+    </div>
+</div>
+
+<div class="destinations">
+    <div class="title">
+        <h1>MOST POPULAR</h1>
+        <hr>
+    </div>
+    <div class="destination-list-container">
+        <ng-container *ngFor="let destination of arrayOfDestinations">
+            <app-destination-card (sendDestination)="onSendTheDestination($event)"
+                *ngIf="searchEnteredDestination === '' || destination.name.toLowerCase().includes(searchEnteredDestination.toLowerCase())"
+                [destination]="destination"></app-destination-card>
+        </ng-container>
+    </div>
+</div>

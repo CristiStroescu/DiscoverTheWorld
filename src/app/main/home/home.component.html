@@ -1,0 +1,12 @@
+<div class="home-window">
+    <div class="text">
+        <h3>DISCOVER THE COLORFUL WORLD</h3>
+        <h1>{{title | uppercase }}</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <button (click)="discoverNowButton()">DISCOVER NOW</button>
+</div>
+<div *ngIf="discoverNowButtonClicked===true">
+    <app-search-and-book (destination)="onTitleChanged($event)"></app-search-and-book>
+</div>

@@ -1,0 +1,35 @@
+.services-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 40px 0;
+}
+
+.services {
+    //line-height: 0.3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.title {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: lightgreen;
+}
+
+hr {
+    border: 1px solid lightgrey;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.destinations{
+    padding: 50px;
+    background-color: rgb(245, 245, 245);
+    .destination-list-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+    
+}
